@@ -190,7 +190,7 @@ module Sidekiq
     end
 
     def root_path
-      "#{env["SCRIPT_NAME"]}/"
+      "#{Sidekiq::Web.redirect_path}#{env["SCRIPT_NAME"]}/"
     end
 
     def current_path
