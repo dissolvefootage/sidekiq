@@ -87,7 +87,7 @@ module Sidekiq
         puts "WARNING: Sidekiq::Web.session_secret= is no longer relevant and will be removed in Sidekiq 7.0. #{caller(1..1).first}"
       end
 
-      attr_accessor :app_url, :redis_pool
+      attr_accessor :app_url, :redirect_path, :redis_pool
       attr_writer :locales, :views
     end
 
